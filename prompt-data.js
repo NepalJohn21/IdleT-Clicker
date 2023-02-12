@@ -12,5 +12,6 @@ if (localStorage.itscreated == 0) {
     } else {
         alert("Subscess!");
         localStorage.itscreated = 1;
+        window.open("https://github.com/NepalJohn21/IdleT-Clicker/new/main?filename=player/" + getName + "/leaderboard.md")
     }
 }
