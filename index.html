@@ -8,5 +8,12 @@
 </head>
 <body>
     <div class="html-content"></div>
+    <script>
+        let parameters = new URLSearchParams(window.location.search)
+
+        // These Params:
+        let defaultPlayerName = parameters.get("default_player_name")
+    </script>
+    <script src="prompt-data.js"></script>
 </body>
 </html>
