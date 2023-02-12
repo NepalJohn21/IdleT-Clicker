@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=360, initial-scale=1.0">
+    <title>IdleT Clicker</title>
+</head>
+<body>
+    <div class="html-content"></div>
+    <script>
+        let html_content = document.querySelector(".html-content")
+    </script>
+    <script>
+        let parameters = new URLSearchParams(window.location.search)
+
+        // These Params:
+        let defaultPlayerName = parameters.get("default_player_name")
+    </script>
+    <script src="prompt-data.js"></script>
+    <script>
+        if (localStorage.points) {
+            //NO DATA
+        } else {
+            localStorage.setItem("points", 0);
+        }
+
+        function clicked() {
+            localStorage.points = Number(localStorage.points) + 1;
+        }
+
+        function shareNow(link) {
+            prompt("[DON'T EDIT] Please copy this link and paste link on social apps:", link)
+        }
+
+        setInterval(() => {
+            if (localStorage.itscreated == 1) {
+                    html_content.innerHTML = `<h1>${localStorage.points} Points</h1>
+                    <button onclick="clicked()">Click</button>
+                    <button onclick="shareNow(document.URL)">Share</button>`
+            }
+        }, 100);
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63e95c7d25719e3b"></script>
+</body>
+</html>
