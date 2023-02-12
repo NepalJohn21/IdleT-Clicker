@@ -18,5 +18,23 @@
         let defaultPlayerName = parameters.get("default_player_name")
     </script>
     <script src="prompt-data.js"></script>
+    <script>
+        if (localStorage.points) {
+            //NO DATA
+        } else {
+            localStorage.setItem("points", 0);
+        }
+
+        function clicked() {
+            localStorage.points = Number(localStorage.points) + 1;
+        }
+
+        setInterval(() => {
+            if (localStorage.itscreated == 1) {
+                    html_content.innerHTML = `<h1>${localStorage.points} Points</h1>
+                    <button onclick="clicked()">Click</button>`
+            }
+        }, 100);
+    </script>
 </body>
 </html>
