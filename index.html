@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XEY3HXR44K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XEY3HXR44K');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=360, initial-scale=1.0">
     <title>IdleT Clicker</title>
 </head>
+
 <body>
     <div class="html-content"></div>
     <script>
@@ -35,7 +46,7 @@
 
         setInterval(() => {
             if (localStorage.itscreated == 1) {
-                    html_content.innerHTML = `<h1>${localStorage.points} Points</h1>
+                html_content.innerHTML = `<h1>${localStorage.points} Points</h1>
                     <button onclick="clicked()">Click</button>
                     <button onclick="shareNow(document.URL)">Share</button>`
             }
@@ -44,4 +55,5 @@
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63e95c7d25719e3b"></script>
 </body>
+
 </html>
