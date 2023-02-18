@@ -1,1 +1,1 @@
-# IdleT-Clicker
+the example branch.
