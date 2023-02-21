@@ -9,4 +9,4 @@ assignees: NepalJohn21
 
 # Insert Title
 
-<input maxlength="70"></input>
+<input type="text" maxlength="70"></input>
