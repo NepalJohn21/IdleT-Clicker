@@ -61,9 +61,12 @@
 
         // These Params:
         let defaultPlayerName = parameters.get("default_player_name")
+        let language = parameters.get("lang")
     </script>
     <script src="prompt-data.js"></script>
     <script>
+        var pointsl, clickl, sharel, upgradetl;
+
         if (localStorage.points) {
             //NO DATA
         } else {
@@ -78,12 +81,33 @@
             prompt("[DON'T EDIT] Please copy this link and paste link on social apps:", link)
         }
 
+        pointsl = "Points"
+        clickl = "Click"
+        sharel = "Share"
+        upgradetl = "Upgrades"
+
+        if (language == "espanol") {
+            pointsl = "Puntos"
+            clickl = "Hacer clic"
+            sharel = "Compartir"
+            upgradetl = "Actualizaciones"
+        }
+
+        if (language == "japan") {
+            pointsl = "ポイント"
+            clickl = "クリック"
+            sharel = "共有"
+            upgradetl = "アップグレード"
+        }
+
         setInterval(() => {
             if (localStorage.itscreated == 1) {
-                html_content.innerHTML = `<h1>${localStorage.points} Points</h1>
-                    <button onclick="clicked()">Click</button>
-                    <button onclick="shareNow(document.URL)">Share</button>
-                    <h1>Upgrades</h1>
+                html_content.innerHTML = `<h1>${localStorage.points} ${pointsl}</h1>
+                    <button onclick="clicked()">${clickl}</button>
+                    <button onclick="shareNow(document.URL)">${sharel}</button>
+                    <button onclick="window.location.href = 'https://nepaljohn21.github.io/IdleT-Clicker/'">English</button>
+                    <button onclick="window.location.href = 'https://nepaljohn21.github.io/IdleT-Clicker/?lang=espanol'">Spanish</button>
+                    <h1>${upgradetl}</h1>
                     <h4>Coming Soon</h4>`
             }
         }, 100);
