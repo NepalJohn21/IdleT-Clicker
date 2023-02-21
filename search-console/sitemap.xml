@@ -1,0 +1,22 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Atomer</title>
+<link rel="self" href="https://nepaljohn21.github.io/IdleT-Clicker/"/>
+<id>https://nepaljohn21.github.io/IdleT-Clicker/</id>
+<updated>2023-02-20T20:52:00-08:00</updated>
+<author>
+<name>GAME</name>
+</author>
+<rights>Copyright (c) 2023 Vercel</rights>
+<category term="Vercel"/>
+<entry>
+<title>Atomer</title>
+<link rel="self" href="https://nepaljohn21.github.io/IdleT-Clicker/"/>
+<id>https://nepaljohn21.github.io/IdleT-Clicker/</id>
+<updated>2023-02-20T17:52:00-08:00</updated>
+<summary type="html">nosummary</summary>
+<author>
+<name>GAME</name>
+</author>
+<category term="Vercel"/>
+</entry>
+</feed>
