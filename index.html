@@ -47,6 +47,29 @@ ga('send', 'pageview');
 </head>
 
 <body>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyB8k3dWwNrQsLFWe1rj8XwswZLDQy2_46A",
+    authDomain: "idlet-clicker-api.firebaseapp.com",
+    projectId: "idlet-clicker-api",
+    storageBucket: "idlet-clicker-api.appspot.com",
+    messagingSenderId: "811976869661",
+    appId: "1:811976869661:web:9bacd09ce6916ec27543f4",
+    measurementId: "G-2M1JTH7DJT"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
     <div class="html-content"></div>
     <a href="https://info.flagcounter.com/6Dqk"><img src="https://s01.flagcounter.com/mini/6Dqk/bg_FFFFFF/txt_000000/border_CCCCCC/flags_1/" alt="Flag Counter" border="0"></a>
     <div></div>
