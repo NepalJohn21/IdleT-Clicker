@@ -81,6 +81,11 @@
         function shareNow(link) {
             prompt("[DON'T EDIT] Please copy this link and paste link on social apps:", link)
         }
+        
+        function getChangeLang(opt) {
+            ga('send', 'event', 'Engagement', 'languageschanged', 'langchange', 1);  //label and value are optional
+            window.location.href = "https://nepaljohn21.github.io/IdleT-Clicker/" + opt;
+        }
 
         pointsl = "Points"
         clickl = "Click"
@@ -106,9 +111,9 @@
                 html_content.innerHTML = `<h1>${localStorage.points} ${pointsl}</h1>
                     <button onclick="clicked()">${clickl}</button>
                     <button onclick="shareNow(document.URL)">${sharel}</button>
-                    <button onclick="window.location.href = 'https://nepaljohn21.github.io/IdleT-Clicker/'">English</button>
-                    <button onclick="window.location.href = 'https://nepaljohn21.github.io/IdleT-Clicker/?lang=espanol'">Spanish</button>
-                    <button onclick="window.location.href = 'https://nepaljohn21.github.io/IdleT-Clicker/?lang=japan'">Japanese</button>
+                    <button onclick="getChangeLang('')">English</button>
+                    <button onclick="getChangeLang('?lang=espanol')">Spanish</button>
+                    <button onclick="getChangeLang('?lang=japan')">Japanese</button>
                     <h1>${upgradetl}</h1>
                     <h4>Coming Soon</h4>`
             }
